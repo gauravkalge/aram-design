@@ -147,7 +147,7 @@ label {
 }
 
 blockquote {
-  border-left: 1px solid #e2e2e2;
+  border-left: 5px solid #e2e2e2;
   margin-top: 25px;
   margin-bottom: 25px;
   padding: 15px 30px;
@@ -181,7 +181,7 @@ figcaption {
 
 .heading-jumbo {
   text-transform: uppercase;
-  border-bottom: 1px #282826;
+  border-bottom: 6px #282826;
   border-radius: 0;
   margin-top: 22px;
   margin-bottom: 0;
@@ -543,7 +543,7 @@ figcaption {
 .intro-grid-left {
   border-left: 1px solid #282826;
   height: 80%;
-  margin-left: 3px;
+  margin-left: 0px;
   padding-top: 0;
   padding-left: 0;
 }
@@ -620,7 +620,7 @@ figcaption {
 
 .intro-left-down-border {
   background-color: #282826;
-  width: 30%;
+  width: 40%;
   height: 0.8px;
   font-size: 70px;
 }
@@ -628,7 +628,7 @@ figcaption {
 .intro-right-item-one-border-top {
   float: right;
   background-color: #282826;
-  width: 70%;
+  width: 71%;
   height: 0.8px;
   margin-bottom: 30px;
   position: absolute;
@@ -642,7 +642,7 @@ figcaption {
   float: none;
   clear: none;
   background-color: #282826;
-  width: 30%;
+  width: 31%;
   height: 0.8px;
   margin-bottom: 0;
   position: absolute;
@@ -654,7 +654,7 @@ figcaption {
 
 .intro-last-top-border {
   background-color: #282826;
-  width: 80%;
+  width: 81%;
   height: 0.8px;
   position: absolute;
   top: 0%;
@@ -703,7 +703,7 @@ figcaption {
 }
 
 .portfolio {
-  padding-top: 10px;
+  padding-top: 110px;
 }
 
 .main-title {
@@ -751,14 +751,13 @@ figcaption {
 .portfolio-item {
   margin-bottom: 20px;
   padding-left: 10px;
-  position: relative;
+  position: static;
 }
 
 .portfolio-item-main {
   border: 1px solid #282826;
   height: auto;
-  width: auto;
-  min-height: 370px;
+  min-height: 270px;
   font-size: 30px;
   position: relative;
 }
@@ -775,13 +774,13 @@ figcaption {
 .portfolio-image {
   float: right;
   filter: grayscale();
-  width: 240px;
-  margin-top: 0px;
+  width: 140px;
+  margin-top: 100px;
   position: absolute;
   top: auto;
-  bottom: auto;
+  bottom: 5px;
   left: auto;
-  right: auto;
+  right: 5px;
 }
 
 .portfolio-category {
@@ -804,8 +803,8 @@ figcaption {
   border-radius: 50%;
   justify-content: center;
   align-items: center;
-  width: 20px;
-  height: 20px;
+  width: 100px;
+  height: 100px;
   padding: 30px;
   font-size: 20px;
   line-height: 24px;
@@ -829,8 +828,8 @@ figcaption {
 }
 
 .about-us {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .about-grid {
@@ -1060,7 +1059,7 @@ figcaption {
 }
 
 .contact-2col-grid {
-  border-top: 1px solid #282826;
+  border-top: 6px solid #282826;
 }
 
 .contact-email {
@@ -1078,8 +1077,8 @@ figcaption {
 
 .contact-title {
   text-transform: uppercase;
-  border-bottom: 1px solid #282826;
-  border-left: 1px solid #282826;
+  border-bottom: 6px solid #282826;
+  border-left: 6px solid #282826;
   margin-top: -1px;
   margin-bottom: 50px;
   padding: 20px;
@@ -1091,7 +1090,7 @@ figcaption {
 }
 
 .footer-inner {
-  border: 1px solid #282826;
+  border: 6px solid #282826;
   justify-content: space-between;
   align-items: flex-end;
   padding: 20px;
@@ -1156,7 +1155,7 @@ figcaption {
 }
 
 .author-details {
-  border-right: 1px solid #282826;
+  border-right: 6px solid #282826;
   width: 300px;
   margin-left: 20px;
   margin-right: 20px;
@@ -1205,7 +1204,7 @@ figcaption {
 
 .single-project-heading {
   text-transform: uppercase;
-  border-bottom: 1px solid #282826;
+  border-bottom: 6px solid #282826;
   margin-top: 0;
   margin-bottom: 40px;
   padding-bottom: 60px;
@@ -1238,7 +1237,7 @@ figcaption {
 .single-pages-header-wrapper {
   border: 1px solid #282826;
   flex: 1;
-  max-width: 1142px;
+  max-width: 1140px;
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -1513,7 +1512,6 @@ figcaption {
 
   .portfolio-item-main {
     height: auto;
-    width: 400px;
     min-height: 440px;
   }
 
@@ -1617,7 +1615,7 @@ figcaption {
   .contact-2col-grid {
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-    border-top: 1px solid #282826;
+    border-top: 6px solid #282826;
     grid-template-rows: auto;
   }
 
@@ -1638,8 +1636,8 @@ figcaption {
 
   .contact-title {
     text-transform: uppercase;
-    border-bottom: 1px solid #282826;
-    border-left: 1px solid #282826;
+    border-bottom: 6px solid #282826;
+    border-left: 6px solid #282826;
     margin-top: -1px;
     margin-bottom: 50px;
     padding: 20px;
@@ -1654,7 +1652,7 @@ figcaption {
   }
 
   .footer-inner {
-    border: 1px solid #282826;
+    border: 6px solid #282826;
     justify-content: space-between;
     margin-bottom: 0;
     padding: 30px 30px 32px;
@@ -1836,7 +1834,6 @@ figcaption {
 
   .portfolio-item-main {
     height: auto;
-    width: 400px;
   }
 
   .portfolio-heading {
@@ -1848,8 +1845,8 @@ figcaption {
 
   .portfolio-image {
     filter: grayscale(0%);
-    width: auto;
-    bottom: auto;
+    width: 80px;
+    bottom: 68px;
   }
 
   .portfolio-category {
@@ -2149,7 +2146,6 @@ figcaption {
 
   .portfolio-item-main {
     height: auto;
-    width: 400px;
     min-height: auto;
     position: relative;
   }
@@ -2348,32 +2344,152 @@ figcaption {
 
   .portfolio-item-main {
     height: auto;
-    width: 400px;
- none;
+  }
+
+  .portfolio-image {
+    filter: grayscale(0%);
+    width: 100%;
+  }
+
+  .portfolio-category {
+    font-size: 20px;
+    bottom: 70px;
+  }
+
+  .about-us {
+    padding-top: 40px;
+    padding-bottom: 10px;
+  }
+
+  .about-grid-img-heading {
+    margin-bottom: 4px;
+    font-size: 18px;
+  }
+
+  .about-grid-img-paragraph {
+    padding: 5px;
+    font-size: 11px;
+  }
+
+  .about-grid-item-big-img-text {
+    left: 9%;
+  }
+
+  .foot-loop {
     padding-top: 20px;
     padding-bottom: 20px;
   }
 
-  .intro-left-down-border {
-    display: none;
-  }
-
-  .intro-loop-text {
+  .foot-loop-text {
     font-size: 20px;
     line-height: 20px;
   }
 
-  .intro-loop-wrapper {
-    padding: 20px 10px;
+  .contact-2col-grid {
+    border-top-style: none;
+    display: block;
   }
 
-  .portfolio {
-    padding-top: 40px;
+  .contact-grid-item {
+    margin-bottom: 40px;
   }
 
-  .portfolio-item-main {
-    height: auto;
-id-area: 1 / 3 / 2 / 4;
+  .contact-title {
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+  }
+
+  .copyright {
+    line-height: 27px;
+  }
+
+  .footer-socials {
+    display: block;
+  }
+
+  .footer-social-links {
+    margin-bottom: 20px;
+  }
+
+  .footer-social-links.foot-social-dot {
+    display: none;
+  }
+
+  .single-blog-heading {
+    margin-bottom: 20px;
+  }
+
+  .single-blog-heading-border {
+    display: none;
+  }
+
+  .author-section {
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+  }
+
+  .author-img {
+    width: 70px;
+    margin-bottom: 20px;
+  }
+
+  .author-details {
+    border-top: 1px solid #282826;
+    border-bottom: 1px solid #282826;
+    border-right-style: none;
+    width: auto;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+  }
+
+  .author-description-text {
+    align-self: flex-end;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .block-quote {
+    font-size: 30px;
+  }
+
+  .singleproj-3col-grid, .singleproj-2col-grid {
+    display: block;
+  }
+
+  .lightbox-div {
+    margin-bottom: 20px;
+  }
+}
+
+#w-node-_2d092a1e-b5e6-51e2-b35b-e813e6745726-31f293ff {
+  grid-area: 1 / 1 / 3 / 2;
+}
+
+#w-node-_176a93da-695f-1b82-74ac-8e2be69343b5-31f293ff {
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+#w-node-_023068df-c5d7-fb18-96c1-4c1cb56526ad-31f293ff {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+#w-node-_0d5712dc-231e-2057-9755-4ccd0f130bf6-31f293ff {
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+#w-node-e252b798-fdf0-94c9-3b03-b5b4027a41e5-31f293ff {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+#w-node-b27729ca-d96a-e391-48c9-c032bdfb0c14-31f293ff {
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+#w-node-_9aaf47f6-269d-f9e3-6c10-d5f2cf3dfd57-31f293ff {
+  grid-area: 1 / 3 / 2 / 4;
 }
 
 #w-node-_377d4da8-1083-5afb-bcc6-b67260e62206-31f293ff {
