@@ -832,8 +832,8 @@ figcaption {
 .portfolio-image {
   float: right;
   filter: grayscale();
-  width: 140px;
-  margin-top: 100px;
+  width: auto;
+  margin-top: 10px;
   position: absolute;
   top: auto;
   bottom: 5px;
@@ -1588,7 +1588,7 @@ figcaption {
 
   .portfolio-image {
     filter: grayscale();
-    width: 180px;
+    width: auto;
   }
 
   .portfolio-category {
@@ -1918,7 +1918,7 @@ figcaption {
 
   .portfolio-image {
     filter: grayscale(0%);
-    width: 80px;
+    width: auto;
     bottom: 68px;
   }
 
@@ -2233,7 +2233,7 @@ figcaption {
 
   .portfolio-image {
     filter: grayscale(0%);
-    width: 100%;
+    width: auto;
     margin-top: 0;
     position: static;
   }
@@ -2433,7 +2433,7 @@ figcaption {
 
   .portfolio-image {
     filter: grayscale(0%);
-    width: 100%;
+    width: auto;
   }
 
   .portfolio-category {
