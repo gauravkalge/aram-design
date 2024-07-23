@@ -192,6 +192,20 @@ figcaption {
   font-weight: 400;
   line-height: 60px;
 }
+.heading-small {
+  text-transform: uppercase;
+  border-bottom: 2px #282826;
+  border-radius: 0;
+  margin-top: 50px;
+  margin-bottom: 0;
+  padding-bottom: 10px;
+  padding-top: 25px;
+  padding-left: 30px;
+  font-family: Oswald, sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+ 
+}
 
 .paragraph-tiny {
   font-size: 12px;
@@ -542,7 +556,7 @@ figcaption {
 
 .intro-grid-left {
   border-left: 1px solid #282826;
-  height: 80%;
+  height: 70%;
   margin-left: 0px;
   padding-top: 0;
   padding-left: 0;
@@ -594,13 +608,13 @@ figcaption {
 .wrapper {
   background-color: #f7f7f7;
   margin-left: 0;
-  padding-top: 89px;
+  padding-top: 81px;
   padding-left: 0;
   font-family: Oswald, sans-serif;
 }
 
 .wrapper.inner-page-wrapper {
-  padding-top: 40px;
+  padding-top: 01px;
 }
 
 .intro-last-text {
@@ -665,7 +679,7 @@ figcaption {
 
 .intro-last-div {
   border-left: 1px solid #282826;
-  padding-top: 30px;
+  padding-top: 10px;
   padding-left: 30px;
   position: relative;
 }
@@ -1402,6 +1416,14 @@ figcaption {
     font-size: 120px;
     line-height: 120px;
   }
+  .heading-small {
+    padding-top: 25px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+  
+    font-size: 25px;
+    
+  }
 
   .logo-link.w--current {
     margin-top: -1px;
@@ -1422,7 +1444,7 @@ figcaption {
   }
 
   .intro-grid-left {
-    height: 100%;
+    height: 70%;
     margin-left: 0;
   }
 
@@ -1466,7 +1488,7 @@ figcaption {
 
   .intro-last-div {
     margin-top: 0;
-    padding-top: 50px;
+    padding-top: 10px;
     padding-left: 50px;
   }
 
@@ -1731,6 +1753,13 @@ figcaption {
   .heading-jumbo {
     font-size: 56px;
     line-height: 70px;
+  }
+  .heading-small {
+    padding-top: 25px;
+    
+    font-size: 25px;
+    
+    
   }
 
   .section.cc-contact {
@@ -2022,6 +2051,10 @@ figcaption {
     font-size: 50px;
     line-height: 64px;
   }
+  .heading-small {
+    font-size: 25px;
+   
+  }
 
   .section {
     margin-left: 15px;
@@ -2283,6 +2316,14 @@ figcaption {
     padding-left: 0;
     font-size: 36px;
     line-height: 48px;
+  }
+  .heading-small {
+    text-align: left;
+    padding-top: 25px;
+    padding-left: 0;
+    font-size: 25x;
+  
+   
   }
 
   .navigation {
