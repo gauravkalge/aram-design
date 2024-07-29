@@ -3,7 +3,7 @@
   --black: white;
 }
 
-#preloader {
+preloader {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -225,7 +225,7 @@ figcaption {
 
 .heading-jumbo {
   text-transform: uppercase;
-  border-bottom: 6px #282826;
+  border-bottom: 1px #282826;
   border-radius: 0;
   margin-top: 22px;
   margin-bottom: 0;
@@ -234,19 +234,19 @@ figcaption {
   font-family: Oswald, sans-serif;
   font-size: 60px;
   font-weight: 400;
-  line-height: 60px;
+  line-height: 70px;
 }
 .heading-small {
   text-transform: uppercase;
   border-bottom: 2px #282826;
   border-radius: 0;
-  margin-top: 50px;
+  margin-top: 22px;
   margin-bottom: 0;
   padding-bottom: 10px;
   padding-top: 25px;
   padding-left: 30px;
   font-family: Oswald, sans-serif;
-  font-size: 30px;
+  font-size: 35px;
   font-weight: 400;
  
 }
@@ -1444,7 +1444,8 @@ figcaption {
   box-shadow: 0 2px 30px rgba(142, 87, 249, .56);
 }
 
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1920px)
+ {
   p {
     margin-bottom: 20px;
   }
@@ -1461,11 +1462,17 @@ figcaption {
     line-height: 120px;
   }
   .heading-small {
-    padding-top: 25px;
-    padding-bottom: 10px;
-    padding-left: 50px;
-  
-    font-size: 25px;
+    text-transform: uppercase;
+  border-bottom: 2px #282826;
+  border-radius: 0;
+  margin-top: 22px;
+  margin-bottom: 0;
+  padding-bottom: 10px;
+  padding-top: 25px;
+  padding-left: 30px;
+  font-family: Oswald, sans-serif;
+  font-size: 25px;
+  font-weight: 400;
     
   }
 
@@ -1799,7 +1806,17 @@ figcaption {
     line-height: 70px;
   }
   .heading-small {
+    text-transform: uppercase;
+    border-bottom: 2px #282826;
+    border-radius: 0;
+    margin-top: 22px;
+    margin-bottom: 0;
+    padding-bottom: 10px;
     padding-top: 25px;
+    padding-left: 30px;
+    font-family: Oswald, sans-serif;
+    
+    font-weight: 400;
     
     font-size: 25px;
     
@@ -2096,7 +2113,17 @@ figcaption {
     line-height: 64px;
   }
   .heading-small {
-    font-size: 25px;
+    text-transform: uppercase;
+  border-bottom: 2px #282826;
+  border-radius: 0;
+  margin-top: 22px;
+  margin-bottom: 0;
+  padding-bottom: 10px;
+  padding-top: 25px;
+  padding-left: 30px;
+  font-family: Oswald, sans-serif;
+  font-size: 25px;
+  font-weight: 400;;
    
   }
 
@@ -2362,10 +2389,17 @@ figcaption {
     line-height: 48px;
   }
   .heading-small {
-    text-align: left;
+    text-transform: uppercase;
+    border-bottom: 2px #282826;
+    border-radius: 0;
+    margin-top: 22px;
+    margin-bottom: 0;
+    padding-bottom: 10px;
     padding-top: 25px;
-    padding-left: 0;
-    font-size: 25x;
+    padding-left: 30px;
+    font-family: Oswald, sans-serif;
+    font-size: 25px;
+    font-weight: 400;
   
    
   }
