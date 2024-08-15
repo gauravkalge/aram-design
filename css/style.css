@@ -5,45 +5,65 @@
 
 #preloader {
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  background-color: #000;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.preloader-content {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999;
-  overflow: hidden;
-  animation: fadeOut 1s 2s forwards;
 }
 
-.preloader-text {
-  font-size: 3rem;
-  color: #fff;
-  animation: fadeIn 1s forwards;
+.preloader-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  animation: fade-in-out 2s ease-in-out infinite, scale-up-down 2s ease-in-out infinite, color-change 4s linear infinite;
 }
 
-#content {
-  display: none;
+@keyframes fade-in-out {
+  0%, 100% {
+      opacity: 0;
+  }
+  50% {
+      opacity: 1;
+  }
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+@keyframes scale-up-down {
+  0%, 100% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.2);
+  }
 }
 
-@keyframes fadeOut {
-  0% { opacity: 1; }
-  100% { opacity: 0; visibility: hidden; }
-}
-
-@keyframes splitScreen {
-  0% { transform: translateX(0); }
-  50% { transform: translateX(-50%); }
-  100% { transform: translateX(-100%); }
-}
-
-#preloader.fade-out {
-  animation: splitScreen 1s forwards;
+@keyframes color-change {
+  0% {
+      color: #000;
+  }
+  25% {
+      color: #b8b2b2;
+  }
+  50% {
+      color: #636463;
+  }
+  75% {
+      color: #3a3a44;
+  }
+  100% {
+      color: #000;
+  }
 }
 
 
@@ -63,6 +83,13 @@
   display: block;
 }
 
+.w-layout-imgcontainer {
+  grid-template-rows: auto auto;
+  max-width: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
 .w-layout-layout {
   grid-row-gap: 20px;
   grid-column-gap: 20px;
@@ -96,6 +123,11 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 28px;
+}
+body.loaded #preloader {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
 h1 {
@@ -761,7 +793,7 @@ figcaption {
 }
 
 .portfolio {
-  padding-top: 110px;
+  padding-top: 10px;
 }
 
 .main-title {
@@ -885,6 +917,50 @@ figcaption {
   opacity: 1;
   position: relative;
 }
+/* Architectural Lines */
+.architectural-lines {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+  margin-bottom: 20px; /* Adjust spacing as needed */
+}
+
+.architectural-lines svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  stroke: #333; /* Adjust color to match your design */
+}
+
+.team-section {
+  position: relative;
+  padding: 20px;
+}
+
+.team-grid-item {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  position: relative;
+  border: 1px solid #ddd; /* Add border for better separation */
+  padding: 10px;
+  background: #f9f9f9; /* Light background for team items */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.team-member-img {
+  border-radius: 50%; /* Circular image */
+  margin-right: 20px; /* Space between image and text */
+}
+
+.team-member-info {
+  flex: 1;
+}
+
 
 .about-us {
   padding-top: 15px;
@@ -1105,7 +1181,7 @@ figcaption {
 }
 
 .foot-loop {
-  padding-top: 80px;
+  padding-top: 30px;
   padding-bottom: 80px;
 }
 
@@ -1118,7 +1194,7 @@ figcaption {
 }
 
 .contact-2col-grid {
-  border-top: 6px solid #282826;
+  border-top: 1px solid #282826;
 }
 
 .contact-email {
@@ -1136,8 +1212,8 @@ figcaption {
 
 .contact-title {
   text-transform: uppercase;
-  border-bottom: 6px solid #282826;
-  border-left: 6px solid #282826;
+  border-bottom: 1px solid #282826;
+  border-left: 1px solid #282826;
   margin-top: -1px;
   margin-bottom: 50px;
   padding: 20px;
@@ -1149,7 +1225,7 @@ figcaption {
 }
 
 .footer-inner {
-  border: 6px solid #282826;
+  border: 1px solid #282826;
   justify-content: space-between;
   align-items: flex-end;
   padding: 20px;
@@ -1209,12 +1285,33 @@ figcaption {
   display: flex;
 }
 
+
+.image-container {
+  display: inline-block; /* To contain the image and its hover effect */
+  position: relative; /* So that the new image can be positioned on top */
+}
+
 .author-img {
-  width: 120px;
+width: 120px;
+/* Initial size of the image */
+  height: auto;
+  transition: opacity 0.3s ease-in-out; /* Smooth transition for opacity */
+}
+
+.image-container:hover .author-img {
+  opacity: 3; /* Hide the original image on hover */
+}
+
+.image-container:hover {
+  background-image: url('images/author2.png'); /* The image to display on hover */
+  background-size: cover; /* Ensure the hover image covers the container */
+  background-position: center; /* Center the hover image */
+  width: 200px; /* Same as the original image's size */
+  height: 200px; /* Adjust height to maintain aspect ratio */
 }
 
 .author-details {
-  border-right: 6px solid #282826;
+  border-right: 1px solid #282826;
   width: 300px;
   margin-left: 20px;
   margin-right: 20px;
@@ -1244,7 +1341,7 @@ figcaption {
 
 .block-quote {
   text-transform: uppercase;
-  border-left-width: 6px;
+  border-left-width: 1px;
   border-left-color: #282826;
   font-size: 30px;
   font-weight: 500;
@@ -1252,21 +1349,20 @@ figcaption {
 }
 
 .single-project-wrapper {
-  padding-top: 70px;
-  padding-bottom: 70px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .single-project-row {
-  margin-left: -10px;
-  margin-right: -10px;
+ 
 }
 
 .single-project-heading {
   text-transform: uppercase;
-  border-bottom: 6px solid #282826;
+  border-bottom: 1px solid #282826;
   margin-top: 0;
   margin-bottom: 40px;
-  padding-bottom: 60px;
+  padding-bottom: 30px;
   font-size: 80px;
   line-height: 80px;
 }
@@ -1304,6 +1400,24 @@ figcaption {
 
 .single-pages-header {
   margin-top: 0;
+}
+
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+}
+
+/* Closable button inside the expanded image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
 }
 
 .navbar {
@@ -1564,7 +1678,7 @@ figcaption {
   }
 
   .portfolio {
-    padding-top: 170px;
+    padding-top: 20px;
   }
 
   .main-heading {
@@ -1579,7 +1693,10 @@ figcaption {
   .main-title-paragraph {
     font-size: 24px;
   }
+  .main-title-paragraph2 {
+    font-size: 10px;
 
+  }
   .portfolio-list-wrapper {
     margin-top: 30px;
   }
@@ -1671,7 +1788,7 @@ figcaption {
   }
 
   .foot-loop {
-    padding-top: 90px;
+    padding-top: 30px;
     padding-bottom: 90px;
   }
 
@@ -1689,7 +1806,7 @@ figcaption {
   .contact-2col-grid {
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-    border-top: 6px solid #282826;
+    border-top: 1px solid #282826;
     grid-template-rows: auto;
   }
 
@@ -1710,8 +1827,8 @@ figcaption {
 
   .contact-title {
     text-transform: uppercase;
-    border-bottom: 6px solid #282826;
-    border-left: 6px solid #282826;
+    border-bottom: 1px solid #282826;
+    border-left: 1px solid #282826;
     margin-top: -1px;
     margin-bottom: 50px;
     padding: 20px;
@@ -1761,10 +1878,32 @@ figcaption {
     line-height: 120px;
   }
 
-  .author-img {
-    width: 140px;
-    margin-left: 30px;
-  }
+  
+
+  .image-container {
+    display: inline-block; /* To contain the image and its hover effect */
+    position: relative; /* So that the new image can be positioned on top */
+}
+
+.author-img {
+  width: 140px;
+  margin-left: 30px;/* Initial size of the image */
+    height: auto;
+    transition: opacity 0.3s ease-in-out; /* Smooth transition for opacity */
+}
+
+.image-container:hover .author-img {
+    opacity: 0; /* Hide the original image on hover */
+}
+
+.image-container:hover {
+    background-image: url('images/author-hover.png'); /* The image to display on hover */
+    background-size: cover; /* Ensure the hover image covers the container */
+    background-position: center; /* Center the hover image */
+    width: 100px; /* Same as the original image's size */
+    height: 100px; /* Adjust height to maintain aspect ratio */
+}
+
 
   .author-details {
     margin-left: 60px;
@@ -2075,9 +2214,31 @@ figcaption {
     line-height: 40px;
   }
 
-  .author-img {
-    width: 60px;
-  }
+ 
+  .image-container {
+    display: inline-block; /* To contain the image and its hover effect */
+    position: relative; /* So that the new image can be positioned on top */
+}
+
+.author-img {
+  width: 60px;
+  margin-left: 30px;/* Initial size of the image */
+    height: auto;
+    transition: opacity 0.3s ease-in-out; /* Smooth transition for opacity */
+}
+
+.image-container:hover .author-img {
+    opacity: 0; /* Hide the original image on hover */
+}
+
+.image-container:hover {
+    background-image: url('images/author-hover.png'); /* The image to display on hover */
+    background-size: cover; /* Ensure the hover image covers the container */
+    background-position: center; /* Center the hover image */
+    width: 100px; /* Same as the original image's size */
+    height: 100px; /* Adjust height to maintain aspect ratio */
+}
+
 
   .author-details {
     width: 280px;
@@ -2098,7 +2259,7 @@ figcaption {
 
   .single-project-heading {
     margin-bottom: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 10px;
     font-size: 40px;
     line-height: 40px;
   }
@@ -2373,11 +2534,11 @@ figcaption {
   }
 
   .single-project-wrapper {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 
-  .single-project-left {
+  .single-project {
     margin-bottom: 20px;
   }
 }
@@ -2475,6 +2636,49 @@ figcaption {
     font-size: 20px;
     bottom: 70px;
   }
+/* Architectural Lines */
+.architectural-lines {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+  margin-bottom: 20px; /* Adjust spacing as needed */
+}
+
+.architectural-lines svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  stroke: #333; /* Adjust color to match your design */
+}
+
+.team-section {
+  position: relative;
+  padding: 20px;
+}
+
+.team-grid-item {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  position: relative;
+  border: 1px solid #ddd; /* Add border for better separation */
+  padding: 10px;
+  background: #f9f9f9; /* Light background for team items */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.team-member-img {
+  border-radius: 50%; /* Circular image */
+  margin-right: 20px; /* Space between image and text */
+}
+
+.team-member-info {
+  flex: 1;
+}
 
   .about-us {
     padding-top: 40px;
@@ -2551,10 +2755,31 @@ figcaption {
     padding-left: 0;
   }
 
-  .author-img {
-    width: 70px;
-    margin-bottom: 20px;
-  }
+
+
+  .image-container {
+    display: inline-block; /* To contain the image and its hover effect */
+    position: relative; /* So that the new image can be positioned on top */
+}
+
+.author-img {
+  width: 70px;
+  margin-bottom: 20px;/* Initial size of the image */
+    height: auto;
+    transition: opacity 0.3s ease-in-out; /* Smooth transition for opacity */
+}
+
+.image-container:hover .author-img {
+    opacity: 0; /* Hide the original image on hover */
+}
+
+.image-container:hover {
+    background-image: url('images/author-hover.png'); /* The image to display on hover */
+    background-size: cover; /* Ensure the hover image covers the container */
+    background-position: center; /* Center the hover image */
+    width: 100px; /* Same as the original image's size */
+    height: 100px; /* Adjust height to maintain aspect ratio */
+}
 
   .author-details {
     border-top: 1px solid #282826;
